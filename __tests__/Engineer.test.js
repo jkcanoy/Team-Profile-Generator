@@ -38,7 +38,7 @@ describe("Engineer", () => {
   });
 
   describe("getGithub", () => {
-    it("Should return Engineer GitHub from getGithub", () => {
+    it("Should return Engineer GitHub from getGithub()", () => {
       const E = new Engineer("Kyle", 1, "kyle@kyle.com", "jkcanoy");
 
       expect(E.getGithub()).toEqual("jkcanoy");

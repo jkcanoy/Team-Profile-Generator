@@ -93,8 +93,8 @@ generateHTML = () => {
       crossorigin="anonymous"
     />
     <link
-      href="https://use.fontawesome.com/releases/v5.0.4/css/all.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
     <title>Team Profile Generator</title>
   </head>
@@ -102,7 +102,7 @@ generateHTML = () => {
     <header class="container-fluid p-0 mb-5 header">
       <div class="d-flex justify-content-center text-white bg-dark">
         <h1>
-          <i class="fas fa-users"></i> Team Profile <i class="fas fa-users"></i>
+        <i class="bi bi-people"></i> Team Profile <i class="bi bi-people"></i>
         </h1>
       </div>
     </header>
@@ -130,12 +130,12 @@ addHTML = (member) => {
       data = `<div class="col d-flex justify-content-center mb-3">
       <div class="card" style="width: 18rem">
         <div class="card-body text-info bg-dark">
-          <h5 class="card-title">${name}<br><br>${role}</h5>
+          <h5 class="card-title">${name}<br><br><i class="bi bi-cup-fill"></i> ${role}</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
-          <li class="list-group-item">Office Number: ${officeNumber}</li>
+          <li class="list-group-item"><strong><i class="bi bi-person-badge"></i> ID:</strong> ${id}</li>
+          <li class="list-group-item"><strong><i class="bi bi-envelope"></i> Email:</strong> ${email}</li>
+          <li class="list-group-item"><strong><i class="bi bi-telephone"></i> Office Number:</strong> ${officeNumber}</li>
         </ul>
       </div>
     </div>`;
@@ -144,12 +144,12 @@ addHTML = (member) => {
       data = `<div class="col d-flex justify-content-center mb-3">
       <div class="card" style="width: 18rem">
         <div class="card-body text-info bg-dark">
-        <h5 class="card-title">${name}<br><br>${role}</h5>
+        <h5 class="card-title">${name}<br><br><i class="bi bi-sunglasses"></i> ${role}</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
-          <li class="list-group-item">GitHub: ${github}</li>
+        <li class="list-group-item"><strong><i class="bi bi-person-badge"></i> ID:</strong> ${id}</li>
+        <li class="list-group-item"><strong><i class="bi bi-envelope"></i> Email:</strong> ${email}</li>
+          <li class="list-group-item"><strong><i class="bi bi-github"></i> GitHub:</strong> ${github}</li>
         </ul>
       </div>
     </div>`;
@@ -158,12 +158,12 @@ addHTML = (member) => {
       data = `<div class="col d-flex justify-content-center mb-3">
       <div class="card" style="width: 18rem">
         <div class="card-body text-info bg-dark">
-        <h5 class="card-title">${name}<br><br>${role}</h5>
+        <h5 class="card-title">${name}<br><br><i class="bi bi-eyeglasses"></i> ${role}</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
-          <li class="list-group-item">School: ${school}</li>
+        <li class="list-group-item"><strong><i class="bi bi-person-badge"></i> ID:</strong> ${id}</li>
+        <li class="list-group-item"><strong><i class="bi bi-envelope"></i> Email:</strong> ${email}</li>
+          <li class="list-group-item"><strong><i class="bi bi-pencil"></i> School:</strong> ${school}</li>
         </ul>
       </div>
     </div>`;

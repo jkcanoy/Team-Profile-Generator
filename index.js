@@ -6,11 +6,13 @@ const fs = require("fs");
 
 const employees = [];
 
+// Start application
 function start() {
   generateHTML();
   addMember();
 }
 
+// Add member through Inquirer prompts
 addMember = () => {
   inquirer
     .prompt([
@@ -36,6 +38,7 @@ addMember = () => {
         name: "email",
       },
     ])
+    // Information exclusive to role
     .then(function ({ name, role, id, email }) {
       let roleOther = "";
       if (role === "Manager") {
@@ -52,6 +55,7 @@ addMember = () => {
             message: `What is the team member's ${roleOther}`,
             name: "roleOther",
           },
+          // Add another member
           {
             type: "list",
             message: "Would you like to add another team member?",
@@ -59,6 +63,7 @@ addMember = () => {
             choices: ["Yes", "No"],
           },
         ])
+        // Create instance of manager, engineer, or intern
         .then(function ({ roleOther, addMore }) {
           let newMember;
           if (role === "Manager") {
@@ -80,6 +85,7 @@ addMember = () => {
     });
 };
 
+// Generate beginning of HTML file
 generateHTML = () => {
   let html = `<!DOCTYPE html>
 <html lang="en">
@@ -117,6 +123,7 @@ generateHTML = () => {
   console.log("GENERATING HTML");
 };
 
+// Add HTML for new Member
 addHTML = (member) => {
   return new Promise(function (resolve, reject) {
     const name = member.getName();
@@ -125,6 +132,7 @@ addHTML = (member) => {
     const role = member.getRole();
 
     let data = "";
+    // Manager HTML
     if (role === "Manager") {
       const officeNumber = member.getOfficeNumber();
       data = `<div class="col d-flex justify-content-center mb-3">
@@ -139,6 +147,7 @@ addHTML = (member) => {
         </ul>
       </div>
     </div>`;
+      // Engineer HTML
     } else if (role === "Engineer") {
       const github = member.getGithub();
       data = `<div class="col d-flex justify-content-center mb-3">
@@ -168,6 +177,7 @@ addHTML = (member) => {
       </div>
     </div>`;
     }
+    // Intern HTML
     console.log("ADDING TEAM MEMBER");
     fs.appendFile("./dist/index.html", data, function (err) {
       if (err) {
@@ -179,6 +189,7 @@ addHTML = (member) => {
   });
 };
 
+// Add end of HTML file
 finishHTML = () => {
   let html = `</div>
     </div>
@@ -193,4 +204,5 @@ finishHTML = () => {
   console.log("HTML COMPLETED");
 };
 
+// Call start application function
 start();

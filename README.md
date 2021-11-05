@@ -25,7 +25,7 @@ Users are prompted by the application to provide information regarding team memb
 
 ## Usage
 
-1. Access E-commerce Back End through the command line on your local machine.
+1. Access Team Profile Generator through the command line on your local machine.
 2. Run `node index.js` to begin Inquirer prompts.
 3. Answer each question to add a team member.
 4. When all team members have been added, go to the `./dist` directory and open the `index.html` file in the browser to view your team.

@@ -32,6 +32,10 @@ Users are prompted by the application to provide information regarding team memb
 
 Demo
 
+Screenshot shows sample html page
+
+![screenshot showing sample html page](./images/screenShot.png)
+
 Gif showing the tests passing, the inquirer prompts in the command-line, and the generated html page.
 
 https://drive.google.com/file/d/1jS7wwiNVZj4X6QxYy0BPhrPI2Rj2_rjX/view
